@@ -204,7 +204,7 @@ public class Oputuvanna1 extends JFrame {
 				s_putanna8 = tF_ch_putanna8.getText();
 				try {
 					i_putanna8 = Integer.parseInt(s_putanna8);
-
+					
 					s_putanna9 = ch_putanna9.getSelectedItem();
 					s_putanna10 = ch_putanna10.getSelectedItem();
 					s_putanna11 = ch_putanna11.getSelectedItem();
@@ -212,9 +212,32 @@ public class Oputuvanna1 extends JFrame {
 					s_putanna13 = ch_putanna13.getSelectedItem();
 					s_putanna14 = ch_putanna14.getSelectedItem();
 
-					new Rezultatu("Інструменти інвестування", i_putanna0, i_putanna1, i_putanna2, i_putanna3,
-							i_putanna4, i_putanna5, s_ch_putanna6, i_putanna8, s_putanna9, s_putanna10, s_putanna11,
-							s_putanna12, s_putanna13, s_putanna14);
+					if(i_putanna8 >= 20000) {
+						if(s_putanna9.equals("Готовий ризикувати")) {
+							if(s_putanna10.equals("до 1 року")||s_putanna10.equals("від 1 до 3 років")) {
+								new KincevuyVubir(8,9);
+							}else {
+								new Rezultatu("Інструменти інвестування",5);
+							}
+						}else {
+							new KincevuyVubir(1,4);
+						}
+					}else {
+						if(s_putanna10.equals("до 1 року")||s_putanna10.equals("від 1 до 3 років")) {
+							new Rezultatu("Інструменти інвестування",2);
+						}else {
+							if(i_putanna3 == 1) {
+								new Rezultatu("Інструменти інвестування",6);
+							}else {
+								new KincevuyVubir(3,7);
+							}
+						}							
+					}
+										
+//					new Rezultatu("Інструменти інвестування", i_putanna0, i_putanna1, i_putanna2, i_putanna3,
+//							i_putanna4, i_putanna5, s_ch_putanna6, i_putanna8, s_putanna9, s_putanna10, s_putanna11,
+//							s_putanna12, s_putanna13, s_putanna14);
+					
 					setVisible(false);
 
 				} catch (Exception e) {

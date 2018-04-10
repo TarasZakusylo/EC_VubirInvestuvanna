@@ -74,12 +74,12 @@ public class Oputuvanna extends JFrame {
 		getContentPane().add(l_komentar1);
 
 		JLabel l_kartunka = new JLabel(" ");
-		l_kartunka.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\kartunka_oputuvanna.png"));
+		l_kartunka.setIcon(new ImageIcon("res/fon/kartunka_oputuvanna.png"));
 		l_kartunka.setBounds(642, 71, 115, 191);
 		getContentPane().add(l_kartunka);
 
 		JLabel l_kartunka1 = new JLabel(" ");
-		l_kartunka1.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\kartunka_oputuvanna1.png"));
+		l_kartunka1.setIcon(new ImageIcon("res/fon/kartunka_oputuvanna1.png"));
 		l_kartunka1.setBounds(652, 275, 115, 191);
 		getContentPane().add(l_kartunka1);
 
@@ -309,7 +309,7 @@ public class Oputuvanna extends JFrame {
 		getContentPane().add(l_prodovgutu);
 
 		JLabel l_fon = new JLabel("");
-		l_fon.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\fon_oputuvanna.jpg"));
+		l_fon.setIcon(new ImageIcon("res/fon/fon_oputuvanna.jpg"));
 		l_fon.setBounds(0, 0, 794, 565);
 		getContentPane().add(l_fon);
 

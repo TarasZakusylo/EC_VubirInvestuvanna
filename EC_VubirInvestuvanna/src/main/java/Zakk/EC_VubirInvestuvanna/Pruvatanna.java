@@ -59,7 +59,7 @@ public class Pruvatanna extends JFrame {
 				setVisible(false);
 			}
 		});
-		l_fon.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\fon_pruvitanna.jpeg"));
+		l_fon.setIcon(new ImageIcon("res/fon/fon_pruvitanna.jpeg"));
 		l_fon.setBounds(0, 0, 794, 565);
 		getContentPane().add(l_fon);
 

@@ -2,13 +2,13 @@ package Zakk.EC_VubirInvestuvanna;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 
 public class KincevuyVubir extends JFrame {
 
@@ -24,10 +24,11 @@ public class KincevuyVubir extends JFrame {
 	String s_NazvaVusnovku8 = "Start-up";
 	String s_NazvaVusnovku9 = "Бізнес";
 
-	String s_putanna1 = "";
-	String s_putanna2 = "";
-	
-	int i_rezultat = 0 ; 
+	String s_putanna1 = "Інвестиції";
+	String s_putanna2 = "Інвестиції";
+
+	int i_rezultat1 = 0;
+	int i_rezultat2 = 0;
 
 	public KincevuyVubir(int i_putanna1, int i_putanna2) {
 
@@ -46,78 +47,78 @@ public class KincevuyVubir extends JFrame {
 		switch (i_putanna1) {
 		case 1:
 			s_putanna1 = s_NazvaVusnovku1;
-			i_rezultat = 1;
+			i_rezultat1 = 1;
 			break;
 		case 2:
 			s_putanna1 = s_NazvaVusnovku2;
-			i_rezultat = 2;
+			i_rezultat1 = 2;
 			break;
 		case 3:
 			s_putanna1 = s_NazvaVusnovku3;
-			i_rezultat = 3;
+			i_rezultat1 = 3;
 			break;
 		case 4:
 			s_putanna1 = s_NazvaVusnovku4;
-			i_rezultat = 4; 
+			i_rezultat1 = 4;
 			break;
 		case 5:
 			s_putanna1 = s_NazvaVusnovku5;
-			i_rezultat = 5;
+			i_rezultat1 = 5;
 			break;
 		case 6:
 			s_putanna1 = s_NazvaVusnovku6;
-			i_rezultat = 6;
+			i_rezultat1 = 6;
 			break;
 		case 7:
 			s_putanna1 = s_NazvaVusnovku7;
-			i_rezultat = 7;
+			i_rezultat1 = 7;
 			break;
 		case 8:
 			s_putanna1 = s_NazvaVusnovku8;
-			i_rezultat = 8;
+			i_rezultat1 = 8;
 			break;
 		case 9:
 			s_putanna1 = s_NazvaVusnovku9;
-			i_rezultat = 9;
+			i_rezultat1 = 9;
 			break;
 		}
-		
+
 		switch (i_putanna2) {
 		case 1:
 			s_putanna2 = s_NazvaVusnovku1;
-			i_rezultat = 1;
+			i_rezultat2 = 1;
 			break;
 		case 2:
 			s_putanna2 = s_NazvaVusnovku2;
-			i_rezultat = 2;
+			i_rezultat2 = 2;
 			break;
 		case 3:
 			s_putanna2 = s_NazvaVusnovku3;
-			i_rezultat = 3;
+			i_rezultat2 = 3;
 			break;
 		case 4:
 			s_putanna2 = s_NazvaVusnovku4;
-			i_rezultat = 4;
+			i_rezultat2 = 4;
 			break;
 		case 5:
 			s_putanna2 = s_NazvaVusnovku5;
-			i_rezultat = 5;
+			i_rezultat2 = 5;
 			break;
 		case 6:
 			s_putanna2 = s_NazvaVusnovku6;
-			i_rezultat = 6;
+			i_rezultat2 = 6;
 			break;
 		case 7:
 			s_putanna2 = s_NazvaVusnovku7;
-			i_rezultat = 7;
+			i_rezultat2 = 7;
 			break;
 		case 8:
 			s_putanna2 = s_NazvaVusnovku8;
-			i_rezultat = 8;
+			i_rezultat2 = 8;
 			break;
 		case 9:
 			s_putanna2 = s_NazvaVusnovku9;
-			i_rezultat = 9;
+			i_rezultat2 = 9;
 			break;
 		}
 
@@ -125,7 +126,8 @@ public class KincevuyVubir extends JFrame {
 		l_variant1.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
-				new Rezultatu("Інструменти інвестування", i_rezultat);
+				new Rezultatu("Інструменти інвестування", i_rezultat1);
+				setVisible(false);
 			}
 		});
 		l_variant1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -139,7 +141,8 @@ public class KincevuyVubir extends JFrame {
 		l_variant2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				new Rezultatu("Інструменти інвестування", i_rezultat);
+				new Rezultatu("Інструменти інвестування", i_rezultat2);
+				setVisible(false);
 			}
 		});
 		l_variant2.setHorizontalAlignment(SwingConstants.CENTER);
@@ -150,11 +153,10 @@ public class KincevuyVubir extends JFrame {
 		l_variant2.setText(s_putanna2);
 
 		JLabel l_fon = new JLabel("");
-		l_fon.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\small_image-1024x588.jpg"));
+		l_fon.setIcon(new ImageIcon("res/fon/kartunka_kincevuyVubir.jpg"));
 		l_fon.setBounds(0, 0, 794, 459);
 		getContentPane().add(l_fon);
 
 		setVisible(true);
 	}
-
 }

@@ -63,12 +63,12 @@ public class Oputuvanna1 extends JFrame {
 		getContentPane().add(l_komentar1);
 
 		JLabel l_kartunka = new JLabel(" ");
-		l_kartunka.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\kartunka_oputuvanna.png"));
+		l_kartunka.setIcon(new ImageIcon("res/fon/kartunka_oputuvanna.png"));
 		l_kartunka.setBounds(662, 101, 115, 191);
 		getContentPane().add(l_kartunka);
 
 		JLabel l_kartunka1 = new JLabel(" ");
-		l_kartunka1.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\kartunka_oputuvanna1.png"));
+		l_kartunka1.setIcon(new ImageIcon("res/fon/kartunka_oputuvanna1.png"));
 		l_kartunka1.setBounds(662, 305, 115, 191);
 		getContentPane().add(l_kartunka1);
 
@@ -212,6 +212,8 @@ public class Oputuvanna1 extends JFrame {
 					s_putanna13 = ch_putanna13.getSelectedItem();
 					s_putanna14 = ch_putanna14.getSelectedItem();
 
+//					new Rezultatu("Інструменти інвестування",9);
+					
 					if(i_putanna8 >= 20000) {
 						if(s_putanna9.equals("Готовий ризикувати")) {
 							if(s_putanna10.equals("до 1 року")||s_putanna10.equals("від 1 до 3 років")) {
@@ -253,7 +255,7 @@ public class Oputuvanna1 extends JFrame {
 		getContentPane().add(l_prodovgutu);
 
 		JLabel l_fon = new JLabel("");
-		l_fon.setIcon(new ImageIcon("C:\\Users\\ZakkZakk\\Desktop\\fon_oputuvanna.jpg"));
+		l_fon.setIcon(new ImageIcon("res/fon/fon_oputuvanna.jpg"));
 		l_fon.setBounds(0, 0, 794, 565);
 		getContentPane().add(l_fon);
 
